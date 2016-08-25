@@ -17,7 +17,14 @@ RUN \
  apt-get install -y \
 	avahi-daemon \
 	dbus \
-	plexmediaserver-installer
+	plexmediaserver-installer && \
+
+# cleanup
+ apt-get clean && \
+ rm -rf \
+	/tmp/* \
+	/var/lib/apt/lists/* \
+	/var/tmp/*
 
 # copy local files
 COPY root/ /

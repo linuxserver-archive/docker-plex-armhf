@@ -11,6 +11,8 @@ The [LinuxServer.io][linuxserverurl] team brings you another container release f
 * [Podcast][podcasturl] covers everything to do with getting the most from your Linux Server plus a focus on all things Docker and containerisation!
 
 # lsioarmhf/plex
+[![Docker Pulls](https://img.shields.io/docker/pulls/lsioarmhf/plex.svg)][hub][![Docker Stars](https://img.shields.io/docker/stars/lsioarmhf/plex.svg)][hub][![Build Status](http://jenkins.linuxserver.io:8080/buildStatus/icon?job=Dockers/LinuxServer.io-armhf/lsioarmhf-plex)](http://jenkins.linuxserver.io:8080/job/Dockers/job/LinuxServer.io-armhf/job/lsioarmhf-plex/)
+[hub]: https://hub.docker.com/r/lsioarmhf/plex/
 
 [Plex](https://plex.tv/) organizes video, music and photos from personal media libraries and streams them to smart TVs, streaming boxes and mobile devices. This container is packaged as a standalone Plex Media Server.
 
@@ -35,7 +37,7 @@ docker create \
 **Parameters**
 
 * `--net=host` - Shares host networking with container, **required**.
-* `-v /config` - Plex library location. *This can grow very large, 50gb+ is likely for a large collection.*
+* `-v /config` - Plex library location. *This can grow very large.*
 * `-v /data/xyz` - Media goes here. Add as many as needed e.g. `/data/movies`, `/data/tv`, etc.
 * `-v /transcode` - Path for transcoding folder, *optional*.
 * `-e PGID=` for for GroupID - see below for explanation
@@ -55,6 +57,8 @@ In this instance `PUID=1001` and `PGID=1001`. To find yours use `id user` as bel
 ```
 
 ## Setting up the application 
+`IMPORTANT... THIS IS THE ARMHF VERSION`
+
 Webui can be found at `<your-ip>:32400/web`
 
 

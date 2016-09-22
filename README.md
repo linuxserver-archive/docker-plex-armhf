@@ -11,7 +11,7 @@ The [LinuxServer.io][linuxserverurl] team brings you another container release f
 * [Podcast][podcasturl] covers everything to do with getting the most from your Linux Server plus a focus on all things Docker and containerisation!
 
 # lsioarmhf/plex
-[![Docker Pulls](https://img.shields.io/docker/pulls/lsioarmhf/plex.svg)][hub][![Docker Stars](https://img.shields.io/docker/stars/lsioarmhf/plex.svg)][hub][![Build Status](http://jenkins.linuxserver.io:8080/buildStatus/icon?job=Dockers/LinuxServer.io-armhf/lsioarmhf-plex)](http://jenkins.linuxserver.io:8080/job/Dockers/job/LinuxServer.io-armhf/job/lsioarmhf-plex/)
+[![](https://images.microbadger.com/badges/image/lsioarmhf/plex.svg)](https://microbadger.com/images/lsioarmhf/plex "Get your own image badge on microbadger.com")[![Docker Pulls](https://img.shields.io/docker/pulls/lsioarmhf/plex.svg)][hub][![Docker Stars](https://img.shields.io/docker/stars/lsioarmhf/plex.svg)][hub][![Build Status](http://jenkins.linuxserver.io:8080/buildStatus/icon?job=Dockers/LinuxServer.io-armhf/lsioarmhf-plex)](http://jenkins.linuxserver.io:8080/job/Dockers/job/LinuxServer.io-armhf/job/lsioarmhf-plex/)
 [hub]: https://hub.docker.com/r/lsioarmhf/plex/
 
 [Plex](https://plex.tv/) organizes video, music and photos from personal media libraries and streams them to smart TVs, streaming boxes and mobile devices. This container is packaged as a standalone Plex Media Server.
@@ -25,7 +25,6 @@ The [LinuxServer.io][linuxserverurl] team brings you another container release f
 docker create \
 	--name=plex \
 	--net=host \
-	-e VERSION=latest \
 	-e PUID=<UID> -e PGID=<GID> \
 	-v </path/to/library>:/config \
 	-v <path/to/tvseries>:/data/tvshows \

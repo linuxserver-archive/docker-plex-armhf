@@ -2,6 +2,8 @@
 [forumurl]: https://forum.linuxserver.io
 [ircurl]: https://www.linuxserver.io/irc/
 [podcasturl]: https://www.linuxserver.io/podcast/
+[appurl]: https://plex.tv
+[hub]: https://hub.docker.com/r/lsioarmhf/plex/
 
 [![linuxserver.io](https://raw.githubusercontent.com/linuxserver/docker-templates/master/linuxserver.io/img/linuxserver_medium.png)][linuxserverurl]
 
@@ -12,12 +14,10 @@ The [LinuxServer.io][linuxserverurl] team brings you another container release f
 
 # lsioarmhf/plex
 [![](https://images.microbadger.com/badges/version/lsioarmhf/plex.svg)](https://microbadger.com/images/lsioarmhf/plex "Get your own version badge on microbadger.com")[![](https://images.microbadger.com/badges/image/lsioarmhf/plex.svg)](https://microbadger.com/images/lsioarmhf/plex "Get your own image badge on microbadger.com")[![Docker Pulls](https://img.shields.io/docker/pulls/lsioarmhf/plex.svg)][hub][![Docker Stars](https://img.shields.io/docker/stars/lsioarmhf/plex.svg)][hub][![Build Status](http://jenkins.linuxserver.io:8080/buildStatus/icon?job=Dockers/LinuxServer.io-armhf/lsioarmhf-plex)](http://jenkins.linuxserver.io:8080/job/Dockers/job/LinuxServer.io-armhf/job/lsioarmhf-plex/)
-[hub]: https://hub.docker.com/r/lsioarmhf/plex/
 
 [Plex](https://plex.tv/) organizes video, music and photos from personal media libraries and streams them to smart TVs, streaming boxes and mobile devices. This container is packaged as a standalone Plex Media Server.
 
-[![plex](http://the-gadgeteer.com/wp-content/uploads/2015/10/plex-logo-e1446990678679.png)][plexurl]
-[plexurl]: https://plex.tv
+[![plex](http://the-gadgeteer.com/wp-content/uploads/2015/10/plex-logo-e1446990678679.png)][appurl]
 
 ## Usage
 

@@ -22,6 +22,8 @@ RUN \
  apt-get install -y \
 	avahi-daemon \
 	dbus \
+	udev \
+	unrar \
 	plexmediaserver-installer && \
 
 # cleanup

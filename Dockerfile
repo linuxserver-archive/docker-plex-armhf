@@ -23,7 +23,7 @@ RUN \
  echo "**** add dev2day repo ****" && \
  wget -O - https://dev2day.de/pms/dev2day-pms.gpg.key | apt-key add - && \
  echo "deb https://dev2day.de/pms/ jessie main" >> /etc/apt/sources.list.d/plex.list && \
- echo "**** install plexmediaserver-installer ****" && \
+ echo "**** install plexmediaserver ****" && \
  apt-get update && \
  apt-get install -y \
 	plexmediaserver-installer && \

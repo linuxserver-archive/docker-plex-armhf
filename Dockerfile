@@ -1,32 +1,33 @@
 FROM lsiobase/xenial.armhf
-MAINTAINER sparklyballs
 
 # set version label
 ARG BUILD_DATE
 ARG VERSION
 LABEL build_version="Linuxserver.io version:- ${VERSION} Build-date:- ${BUILD_DATE}"
+LABEL maintainer="sparklballs"
 
 # environment settings
 ARG DEBIAN_FRONTEND="noninteractive"
 ENV HOME="/config"
 
-# install packages
 RUN \
+ echo "**** install packages ****" && \
  apt-get update && \
  apt-get install -y \
 	apt-transport-https \
-	wget && \
- wget -O - https://dev2day.de/pms/dev2day-pms.gpg.key | apt-key add - && \
- echo "deb https://dev2day.de/pms/ jessie main" >> /etc/apt/sources.list.d/plex.list && \
- apt-get update && \
- apt-get install -y \
 	avahi-daemon \
 	dbus \
 	udev \
 	unrar \
+	wget && \
+ echo "**** add dev2day repo ****" && \
+ wget -O - https://dev2day.de/pms/dev2day-pms.gpg.key | apt-key add - && \
+ echo "deb https://dev2day.de/pms/ jessie main" >> /etc/apt/sources.list.d/plex.list && \
+ echo "**** install plexmediaserver-installer ****" && \
+ apt-get update && \
+ apt-get install -y \
 	plexmediaserver-installer && \
-
-# cleanup
+ echo "**** cleanup ****" && \
  apt-get clean && \
  rm -rf \
 	/tmp/* \

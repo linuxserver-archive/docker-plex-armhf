@@ -1,4 +1,4 @@
-FROM lsiobase/ubuntu.armhf:xenial
+FROM lsiobase/ubuntu.armhf:bionic
 
 # set version label
 ARG BUILD_DATE
@@ -11,24 +11,24 @@ ARG DEBIAN_FRONTEND="noninteractive"
 ENV HOME="/config"
 
 RUN \
- echo "**** install packages ****" && \
+ echo "**** install gnupg and apt-transport-https packages ****" && \
  apt-get update && \
  apt-get install -y \
 	apt-transport-https \
+	gnupg && \
+ echo "**** add dev2day repository ****" && \
+ curl -o - https://dev2day.de/pms/dev2day-pms.gpg.key | apt-key add - && \
+ echo "deb https://dev2day.de/pms/ stretch main" >> /etc/apt/sources.list.d/plex.list && \
+ echo "**** install runtime packages ****" && \
+ apt-get update && \
+ apt-get install -y \
 	avahi-daemon \
 	dbus \
+	plexmediaserver-installer \
 	udev \
 	unrar \
 	wget && \
- echo "**** add dev2day repo ****" && \
- wget -O - https://dev2day.de/pms/dev2day-pms.gpg.key | apt-key add - && \
- echo "deb https://dev2day.de/pms/ jessie main" >> /etc/apt/sources.list.d/plex.list && \
- echo "**** install plexmediaserver ****" && \
- apt-get update && \
- apt-get install -y \
-	plexmediaserver-installer && \
  echo "**** cleanup ****" && \
- apt-get clean && \
  rm -rf \
 	/tmp/* \
 	/var/lib/apt/lists/* \

@@ -82,6 +82,7 @@ Webui can be found at `<your-ip>:32400/web`
 
 ## Versions
 
++ **07.09.18:** Rebase to ubuntu bionic and tidy Dockerfile.
 + **06.01.18:** Fix continuation lines.
 + **28.06.17:** Add udev and unrar packages.
 + **14.10.16:** Add version layer information.

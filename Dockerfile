@@ -28,6 +28,8 @@ RUN \
 	udev \
 	unrar \
 	wget && \
+ echo "**** ensure abc user's home folder is /app ****" && \
+ usermod -d /app abc && \
  echo "**** cleanup ****" && \
  rm -rf \
 	/tmp/* \
